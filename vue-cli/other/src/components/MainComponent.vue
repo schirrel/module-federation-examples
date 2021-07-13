@@ -13,12 +13,17 @@
 </template>
 
 <script>
+import store from "store/state";
 export default {
   name: "MainComponent",
   data() {
     return {
       result: null,
     };
+  },
+  mounted() {
+    console.log("store from other app");
+    store.getter();
   },
   methods: {
     fetchData() {

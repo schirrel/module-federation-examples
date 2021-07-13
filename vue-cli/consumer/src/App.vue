@@ -19,12 +19,17 @@
 </template>
 
 <script>
+import store from "./store";
 export default {
   name: "App",
   components: {
     Button: () => import("core/Button"),
     Section: () => import("core/Section"),
     MainComponent: () => import("other/MainComponent"),
+  },
+  mounted() {
+    console.log("store from core");
+    store.getter();
   },
 };
 </script>
